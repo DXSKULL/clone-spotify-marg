@@ -14,7 +14,7 @@ export function useTopArtists() {
                 const artistIds = artistsLinks.join(",");
                 const res = await axiosInstance.get(`/artists?ids=${artistIds}`);
                 setArtists(res.data.artists);
-                // console.log(res.data.artists);
+                // console.log(res.data.artists); выфвыфв
             } catch (error) {
                 console.log("Error: ", error);
                 setError(true);
@@ -25,5 +25,5 @@ export function useTopArtists() {
         getArtists();
     }, []);
 
-    return {artists, isLoading, isError}
+    return { artists, isLoading, isError }
 }
